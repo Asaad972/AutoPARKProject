@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="subscriberGui.SubscriberDashboardController"
+            stylesheets="@theme.css">
+
+    <!-- Top toolbar -->
+    <top>
+        <ToolBar styleClass="toolbar-header">
+            <Label text="📋 Subscriber Dashboard" styleClass="title-label" />
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="btnDetails" onAction="#openDetails" text="👤 Details" styleClass="btn-secondary" />
+            <Button fx:id="btnLogout" onAction="#logout" text="🔙 Logout" styleClass="btn-secondary" />
+        </ToolBar>
+    </top>
+
+    <!-- Main content -->
+    <center>
+        <VBox alignment="CENTER" spacing="25" styleClass="background-pane">
+
+            <!-- Current parking session -->
+            <Label text="🚗 Current Parking Session" styleClass="section-title" />
+
+            <GridPane hgap="15" vgap="10">
+                <Label text="Parking Spot:" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="form-label"/>
+                <Label fx:id="labelSpot" text="---" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="form-value"/>
+
+                <Label text="Entry Time:" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="form-label"/>
+                <Label fx:id="labelEntryTime" text="---" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="form-value"/>
+
+                <Label text="Time Remaining:" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="form-label"/>
+                <Label fx:id="labelTimeRemaining" text="---" GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="form-value"/>
+
+                <columnConstraints>
+                    <ColumnConstraints/>
+                    <ColumnConstraints/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints/>
+                    <RowConstraints/>
+                    <RowConstraints/>
+                </rowConstraints>
+            </GridPane>
+
+            <!-- Show Available Spots -->
+            <Button fx:id="btnAvailableSpots"
+                    onAction="#handleOpenPublicAvailability"
+                    text="🅿 Show Available Parking Spots"
+                    styleClass="btn-primary" />
+
+            <!-- Action Buttons -->
+            <HBox alignment="CENTER" spacing="20">
+                <Button fx:id="btnExtend" onAction="#openExtendParking" text="⏱ Extend Parking Time" styleClass="btn-action"/>
+                <Button fx:id="btnReserve" onAction="#openReservationWindow" text="🗓 Reserve Future Parking" styleClass="btn-action"/>
+                <Button fx:id="btnDepositReserved" onAction="#handleDepositReservedCar" text="🚗 Deposit Reserved Car" styleClass="btn-action"/>
+                <Button fx:id="btnPickup" onAction="#openCarPickup" text="🚙 Retrieve My Vehicle" styleClass="btn-action"/>
+                <Button fx:id="btnDeposit" onAction="#openCarDeposit" text="🚗 Deposit Car" styleClass="btn-action"/>
+            </HBox>
+
+            <!-- Parking history -->
+            <Separator styleClass="separator-line"/>
+            <Label text="📜 Parking History" styleClass="section-title" />
+
+<TableView fx:id="tableHistory" prefHeight="200" prefWidth="700" styleClass="table-clean">
+    <columns>
+        <TableColumn fx:id="colEntryTime" prefWidth="150" text="Entry Time" />
+        <TableColumn fx:id="colExitTime" prefWidth="150" text="Exit Time" />
+        <TableColumn fx:id="colHistorySpot" prefWidth="100" text="Spot" />
+        <TableColumn fx:id="colWasExtended" prefWidth="100" text="Extended?" />
+        <TableColumn fx:id="colWasLate" prefWidth="100" text="Was Late?" />
+    </columns>
+</TableView>
+
+
+        </VBox>
+    </center>
+</BorderPane>

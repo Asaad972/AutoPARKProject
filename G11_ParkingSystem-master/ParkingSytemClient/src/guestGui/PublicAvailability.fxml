@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane stylesheets="@guestcss.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guestGui.PublicAvailabilityController">
+
+    <VBox alignment="CENTER" spacing="20" styleClass="background-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <Label styleClass="section-title" text="🅿 Parking Spot Availability 🅿" />
+        <Label fx:id="lblAvailable" styleClass="available-label" text="✔ Spots available" />
+
+        <TableView fx:id="tableAvailability" prefHeight="300" prefWidth="600" styleClass="table-style">
+            <columns>
+                <TableColumn fx:id="colSpotNumber" prefWidth="294.4" text="Parking Spot" />
+                <TableColumn fx:id="colStatus" prefWidth="305.6" text="Status" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="btnBack" onAction="#handleBackToMenu" styleClass="btn-danger" text="🔙 Back to Menu" />
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane stylesheets="@MainMenuu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.MainMenuController">
+
+
+
+    <!-- תוכן מסך -->
+    <HBox alignment="CENTER" spacing="20" styleClass="background-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <!-- צד שמאל -->
+        <VBox alignment="CENTER" prefWidth="280" spacing="30">
+
+            <Label styleClass="title-label" text="🚗 Welcome to BPARK" />
+
+            <!-- טופס התחברות -->
+            <VBox alignment="CENTER" spacing="15">
+                <Label styleClass="form-label" text="🔑 Please log in" />
+
+                <TextField fx:id="txtUsername" prefWidth="260" promptText="Username" />
+                <PasswordField fx:id="txtPassword" prefWidth="260" promptText="Password" />
+
+                <VBox alignment="CENTER_LEFT" spacing="5">
+                    <Label styleClass="form-label" text=" Enter as Subscriber:" />
+                    <Label prefWidth="271.0" styleClass="form-note" text="Where are you accessing your account from today?" />
+                </VBox>
+
+                <!-- כפתורי מעבר -->
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <ToggleButton fx:id="toggleHome" styleClass="btn-toggle" text="🏠 Home">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="accessToggleGroup" />
+                        </toggleGroup>
+                    </ToggleButton>
+                    <ToggleButton fx:id="toggleShop" styleClass="btn-toggle" text="🏪 Shop" toggleGroup="$accessToggleGroup" />
+                </HBox>
+
+                <Button fx:id="btnLogin" styleClass="btn-primary" text="➡ Login" />
+            </VBox>
+
+            <Separator />
+
+            <!-- אורח -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label styleClass="section-title" text="Just Visiting ?" />
+                <Button fx:id="btnCheckAvailability" onAction="#checkAvailability" styleClass="btn-action" text="Check Available Parking Spots" />
+                <Label styleClass="form-note" text="No login required." />
+            </VBox>
+        </VBox>
+
+        <!-- מחיצה אנכית -->
+        <Separator orientation="VERTICAL" />
+
+        <!-- צד ימין -->
+        <VBox alignment="CENTER" prefWidth="280" spacing="20">
+            <Label styleClass="scan-logo" text="💳" />
+            <Label styleClass="form-label" text="Or log in using your ID or scan your tag:" />
+            <TextField fx:id="txtAltId" prefWidth="200" promptText="Enter your ID here" />
+            <Button fx:id="btnScanTag" onAction="#handleScanTag" styleClass="btn-secondary" text="📷 Scan Tag" />
+            <Label fx:id="statusLabel" styleClass="error-text" text="Status will appear here" />
+        </VBox>
+
+    </HBox>
+</AnchorPane>

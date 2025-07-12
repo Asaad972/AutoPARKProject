@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="subscriberGui.CarPickupController"
+            stylesheets="@theme.css">
+
+    <VBox alignment="CENTER" spacing="20"
+          styleClass="background-pane"
+          AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+
+        <!-- Title -->
+        <Label text="🚙 Retrieve Your Vehicle" styleClass="section-title" />
+
+        <!-- Parking Code Input -->
+        <TextField fx:id="txtParkingCode" prefWidth="250" promptText="Enter your parking code" />
+
+        <!-- Retrieve Button -->
+        <Button fx:id="btnRetrieve" onAction="#onRetrieveClicked"
+                text="🔓 Retrieve Car" styleClass="btn-action" />
+
+        <!-- Confirmation Message -->
+        <Label fx:id="lblConfirmation" text="✔ Your car is on the way"
+               visible="false" styleClass="available-label" />
+
+        <!-- Lost Code Button (used to be Hyperlink) -->
+        <Button fx:id="btnLostCode" onAction="#onLostCodeClicked"
+                text="❓ I lost my parking code"
+                styleClass="btn-link" />
+
+        <!-- Back Button -->
+        <Button fx:id="btnBack" onAction="#goBack"
+                text="🔙 Back to Menu" styleClass="btn-secondary" />
+
+    </VBox>
+</AnchorPane>

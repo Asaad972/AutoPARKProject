@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="adminGui.AdminParkingHistoryController"
+      spacing="20"
+      alignment="TOP_CENTER"
+      stylesheets="@admincss.css"
+      styleClass="admin-background"
+      prefWidth="600" prefHeight="400">
+
+    <!-- Current Session Details -->
+    <GridPane hgap="10" vgap="8">
+        <Label text="Current Spot:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="labelSpot" text="---" styleClass="form-value" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Entry Time:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="labelEntryTime" text="---" styleClass="form-value" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Time Remaining:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="labelTimeRemaining" text="---" styleClass="form-value" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <!-- Parking History Table -->
+    <TableView fx:id="tableHistory" prefHeight="200" prefWidth="580" styleClass="admin-table">
+        <columns>
+            <TableColumn fx:id="colEntryTime" text="Entry Time" prefWidth="120"/>
+            <TableColumn fx:id="colExitTime" text="Exit Time" prefWidth="120"/>
+            <TableColumn fx:id="colHistorySpot" text="Spot" prefWidth="110"/>
+            <TableColumn fx:id="colWasExtended" text="Extended?" prefWidth="100"/>
+            <TableColumn fx:id="colWasLate" text="Was Late?" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- Back Button -->
+    <HBox alignment="CENTER_RIGHT" prefWidth="580">
+        <Button fx:id="btnBack" text="🔙 Back" onAction="#handleBack" styleClass="btn-secondary"/>
+    </HBox>
+</VBox>

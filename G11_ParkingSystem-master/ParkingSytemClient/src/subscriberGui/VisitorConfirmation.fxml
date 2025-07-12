@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="subscriberGui.VisitorConfirmationController">
+
+    <VBox spacing="25" alignment="CENTER"
+          AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          style="-fx-padding: 40;">
+        <Label text="✅ Parking Request Sent!" style="-fx-font-size: 22px; -fx-text-fill: green;" />
+        <Label text="Waiting for host approval..." />
+        <ProgressIndicator fx:id="loadingSpinner" prefWidth="60" prefHeight="60" />
+        <Button text="❓ Lost Your Code?" fx:id="btnLostCode"
+                style="-fx-background-color: #FFC107; -fx-text-fill: black;" />
+        <Label fx:id="lblCodeResent" text="Code resent to your email/SMS." visible="false"
+               style="-fx-text-fill: green;" />
+        <Button text="🔙 Back to Main Menu" fx:id="btnBack" />
+    </VBox>
+</AnchorPane>

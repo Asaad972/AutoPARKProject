@@ -1,0 +1,91 @@
+/* === Base background === */
+.background-pane {
+    -fx-background-color: #F6EDE3;
+    -fx-padding: 40;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+/* === Titles === */
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5D4037;
+}
+
+/* === Availability status label === */
+.available-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+}
+
+/* === Table === */
+.table-style {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-control-inner-background-alt: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #5D4037;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+/* === Table rows and cells === */
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-cell-size: 36px;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #3E2723;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER;
+    -fx-padding: 6;
+}
+
+/* Hover effect */
+.table-view .table-cell:filled:hover {
+    -fx-background-color: #F6EDE3;
+}
+
+/* Selected row effect */
+.table-view .table-cell:filled:selected {
+    -fx-background-color: #ECD7CD;
+    -fx-text-fill: black;
+}
+
+/* Remove blue focus border */
+.table-view .table-cell:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+}
+
+/* === Buttons === */
+.btn-danger {
+    -fx-background-color: #EB726A;
+    -fx-text-fill: #3E2723;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-pref-width: 200;
+}

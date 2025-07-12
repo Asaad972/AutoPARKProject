@@ -1,0 +1,57 @@
+/* server-style.css */
+
+.root {
+    -fx-background-color: #f0f2f5;
+}
+
+.label {
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Title label */
+.label:title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Status label */
+.label:status-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+/* Default button style */
+.button {
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.15) , 4,0,0,1 );
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+/* Connect button */
+#connectButton {
+    -fx-background-color: #198754;
+}
+
+#connectButton:hover {
+    -fx-background-color: #157347;
+    -fx-effect: dropshadow(gaussian, #66ff99, 10, 0.3, 0, 0);
+}
+
+/* Disconnect button */
+#disconnectButton {
+    -fx-background-color: #dc3545;
+}
+
+#disconnectButton:hover {
+    -fx-background-color: #b52a36;
+    -fx-effect: dropshadow(gaussian, #ff6666, 10, 0.3, 0, 0);
+}
+
+/* Exit button */
+.button:focused, #exitButton:hover {
+    -fx-background-color: #495057;
+    -fx-effect: dropshadow(gaussian, #cccccc, 10, 0.2, 0, 0);
+}

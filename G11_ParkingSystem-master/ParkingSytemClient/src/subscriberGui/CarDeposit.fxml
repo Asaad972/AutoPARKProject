@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<StackPane xmlns="http://javafx.com/javafx/8"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="subscriberGui.CarDepositController"
+           styleClass="background-pane"
+           stylesheets="@theme.css">
+
+
+    <VBox alignment="CENTER" spacing="30">
+
+        <VBox alignment="CENTER" spacing="20"
+              styleClass="card-pane" maxWidth="400">
+
+            <!-- Title -->
+            <Label text="🚗 Vehicle Deposit" styleClass="section-title-large"/>
+
+            <!-- Spot Info -->
+            <Label text="Your assigned parking spot is:" styleClass="form-note"/>
+
+            <Label fx:id="labelSpotNumber" text="---" styleClass="highlighted-label"/>
+
+            <!-- Description -->
+            <Label text="Your vehicle is now being safely transported to its designated parking spot by our automated system. Please ensure your vehicle is positioned correctly on the drop-off platform and step away from the area for your safety."
+                   wrapText="true" textAlignment="CENTER"
+                   maxWidth="340"
+                   styleClass="description-text"/>
+
+            <!-- Finish button -->
+            <Button text="✔ Finish" onAction="#confirmDeposit" styleClass="btn-action"/>
+
+        </VBox>
+    </VBox>
+</StackPane>

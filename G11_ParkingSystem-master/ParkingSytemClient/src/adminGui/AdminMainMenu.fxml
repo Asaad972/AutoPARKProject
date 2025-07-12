@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="admin-background" stylesheets="@admincss.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminGui.AdminMainMenuController">
+
+    <!-- Top Toolbar -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="admin-toolbar">
+            <Label styleClass="admin-toolbar-title" text="⚙ Admin Dashboard Menu" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnExit" onAction="#handleExit" styleClass="btn-danger" text="Exit" />
+        </HBox>
+    </top>
+
+    <!-- Center Menu -->
+    <center>
+        <VBox alignment="CENTER" spacing="40" styleClass="admin-main-center">
+
+            <Label styleClass="admin-subtitle" text="Select Section to Manage" />
+
+            <VBox alignment="CENTER" spacing="20">
+                <Button fx:id="btnOrders" onAction="#handleViewActiveParking" styleClass="admin-menu-button" text="📋 Active Parking Details" />
+
+                <Button fx:id="btnSubscribers" onAction="#handleManageSubscribers" styleClass="admin-menu-button" text="👤 Manage Subscribers" />
+
+                <Button fx:id="btnLogs" onAction="#handleViewLogs" styleClass="admin-menu-button" text="📊 View System Logs" />
+
+                <Button fx:id="btnReports" onAction="#handleViewReports" styleClass="admin-menu-button" text="📊 View System Reports" />
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx/8"
+            fx:controller="subscriberGui.SimulateTagController">
+
+    <VBox spacing="20" alignment="CENTER"
+          AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          style="-fx-padding: 40; -fx-background-color: #f0f8ff;">
+
+        <Label text="📡 Simulate Tag Scan"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+        <Label text="Tap to simulate scanning a subscriber's tag"
+               style="-fx-text-fill: #444;" />
+
+        <Button text="🎯 Scan Tag" fx:id="btnScan"
+                style="-fx-background-color: #03A9F4; -fx-text-fill: white;" />
+
+        <Label fx:id="lblScannedId" text=""
+               style="-fx-font-size: 14px; -fx-text-fill: green;" />
+
+        <Button text="🔙 Back" fx:id="btnBack"
+                style="-fx-background-color: #e0e0e0;" />
+    </VBox>
+</AnchorPane>

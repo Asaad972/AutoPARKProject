@@ -1,0 +1,105 @@
+/* === Layout === */
+.background-pane {
+    -fx-background-color: #F6EDE3;
+    -fx-padding: 30;
+}
+
+/* === Toolbar/Header === */
+.toolbar-header {
+    -fx-background-color: #E0D4C1;
+}
+
+/* === Text Styles === */
+.title-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #A47148;
+}
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5D4037;
+}
+
+.form-label {
+    -fx-text-fill: #5D4037;
+    -fx-font-weight: bold;
+}
+
+.form-value {
+    -fx-text-fill: #3E2723;
+}
+
+.form-note {
+    -fx-font-size: 12px;
+    -fx-text-fill: #777777;
+}
+
+.error-text {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+/* === Buttons (exact same as theme.css) === */
+.btn-primary {
+    -fx-background-color: #EB726A;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-pref-width: 280;
+}
+
+.btn-secondary {
+    -fx-background-color: #A47148;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+}
+
+.btn-action {
+    -fx-background-color: #FF8A65;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+}
+
+/* === Toggle Buttons === */
+.btn-toggle {
+    -fx-background-color: #D7CCC8;
+    -fx-text-fill: #3E2723;
+    -fx-background-radius: 8;
+    -fx-pref-width: 100;
+    -fx-font-weight: bold;
+}
+
+.btn-toggle:selected {
+    -fx-background-color: #A1887F;
+    -fx-text-fill: white;
+}
+
+/* === Logo/Icon === */
+.scan-logo {
+    -fx-font-size: 48px;
+    -fx-text-fill: #5D4037;
+}
+
+/* === Separator === */
+.separator-line {
+    -fx-background-color: #BCAAA4;
+}
+.text-field,
+.password-field {
+    -fx-background-color: #FFF8F0;
+    -fx-text-fill: #3E2723;
+    -fx-font-size: 13px;
+    -fx-border-color: #BCAAA4;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 6 10;
+}
+
+
+.text-field:focused,
+.password-field:focused {
+    -fx-border-color: #EB726A;
+    -fx-border-width: 1.5;
+}

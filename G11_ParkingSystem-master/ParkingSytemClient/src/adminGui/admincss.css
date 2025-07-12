@@ -1,0 +1,291 @@
+/* === Base Background === */
+.admin-background {
+    -fx-background-color: #F6EDE3;
+    -fx-padding: 30;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+/* === Titles === */
+.admin-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5D4037;
+}
+
+.admin-subtitle {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5D4037;
+}
+
+/* === Status Text === */
+.admin-status {
+    -fx-text-fill: #777777;
+    -fx-font-style: italic;
+    -fx-padding: 4 0 0 0;
+    -fx-font-size: 13px;
+}
+
+/* === Content Wrapper === */
+.admin-content-box {
+    -fx-padding: 30;
+}
+
+/* === Tables === */
+.admin-table {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.admin-table .column-header-background {
+    -fx-background-color: #F6EDE3;
+    -fx-border-color: #D0BFAE;
+}
+
+.admin-table .column-header .label {
+    -fx-text-fill: #5D4037;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.admin-table .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3E2723;
+    -fx-padding: 6 10;
+    -fx-cell-size: 36px;
+}
+
+.admin-table .table-row-cell:filled:hover {
+    -fx-background-color: #FCE9E4;
+}
+
+.admin-table .table-row-cell:filled:selected {
+    -fx-background-color: #ECD7CD;
+    -fx-text-fill: black;
+}
+
+.admin-table .filler {
+    -fx-background-color: transparent;
+}
+
+.admin-table .table-cell {
+    -fx-text-fill: #3E2723;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER;
+}
+
+/* === Buttons === */
+.admin-menu-button {
+    -fx-pref-width: 260;
+    -fx-font-size: 16px;
+    -fx-background-color: #EB726A;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.admin-menu-button:hover {
+    -fx-background-color: #d25c59;
+}
+
+.btn-refresh {
+    -fx-background-color: #A47148;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.btn-refresh:hover {
+    -fx-background-color: #8C5A3A;
+}
+
+.btn-danger {
+    -fx-background-color: #FF8A65;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #F57C00;
+}
+
+.btn-secondary {
+    -fx-background-color: #A47148;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.btn-action {
+    -fx-background-color: #EB726A;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* === Toolbar === */
+.admin-toolbar {
+    -fx-padding: 20;
+    -fx-background-color: #A47148;
+}
+
+.admin-toolbar-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* === Form Inputs === */
+.search-field,
+.form-input {
+    -fx-pref-width: 150;
+    -fx-background-color: #FFF8F0;
+    -fx-text-fill: #3E2723;
+    -fx-border-color: #BCAAA4;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 6 10;
+    -fx-font-size: 13px;
+}
+
+.form-label {
+    -fx-text-fill: #5D4037;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.form-value {
+    -fx-text-fill: #3E2723;
+    -fx-font-size: 13px;
+}
+
+/* === Charts === */
+.chart-title {
+    -fx-text-fill: #5D4037;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.chart-legend {
+    -fx-text-fill: #3E2723;
+}
+
+.axis-label {
+    -fx-text-fill: #5D4037;
+    -fx-font-size: 12px;
+}
+
+/* === ComboBox Styling === */
+.combo-box {
+    -fx-background-color: #FFF8F0;
+    -fx-border-color: #BCAAA4;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 13px;
+    -fx-text-fill: #3E2723;
+    -fx-padding: 4 8;
+}
+
+.combo-box:focused {
+    -fx-border-color: #EB726A;
+    -fx-border-width: 1.5;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #A47148;
+}
+
+.combo-box .arrow:hover {
+    -fx-background-color: #8D5A3D;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #3E2723;
+    -fx-background-color: transparent;
+}
+
+.combo-box .list-cell:filled:selected,
+.combo-box .list-cell:filled:hover {
+    -fx-background-color: #FCE9E4;
+    -fx-text-fill: black;
+}
+.combo-box-popup .list-view {
+    -fx-background-color: #FFF8F0;
+    -fx-border-color: #D0BFAE;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.combo-box-popup .list-cell {
+    -fx-text-fill: #3E2723;
+    -fx-font-size: 13px;
+    -fx-padding: 6 10;
+}
+
+.combo-box-popup .list-cell:filled:hover {
+    -fx-background-color: #FCE9E4;
+}
+
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: #ECD7CD;
+    -fx-text-fill: black;
+}
+.tab-pane {
+    -fx-tab-min-width: 140;
+    -fx-tab-max-width: 160;
+    -fx-tab-min-height: 32;
+    -fx-background-color: #F6EDE3;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: #F6EDE3;
+    -fx-border-color: transparent;
+}
+
+.tab {
+    -fx-background-color: #D7CCC8;
+    -fx-text-fill: #5D4037;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6 6 0 0;
+    -fx-padding: 6 12 6 12;
+}
+
+.tab:selected {
+    -fx-background-color: #A1887F;
+    -fx-text-fill: white;
+}
+/* PieChart Legend Background */
+.chart-legend {
+    -fx-background-color: #F6EDE3; /* Same as your admin background */
+    -fx-border-color: #D0BFAE;
+    -fx-border-radius: 8;
+    -fx-padding: 6 12;
+}
+
+/* PieChart Legend Text */
+.chart-legend-item {
+    -fx-text-fill: #3E2723;
+    -fx-font-size: 13px;
+}
+
+.admin-table .table-row-cell {
+    -fx-padding: 0;
+    -fx-cell-size: 36px;
+}
+
+.admin-table .table-cell {
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-padding: 0;
+    -fx-font-size: 13px;
+}
+

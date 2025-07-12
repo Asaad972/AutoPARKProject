@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="adminGui.AdminReportsController"
+            prefWidth="1000.0" prefHeight="720.0"
+            stylesheets="@admincss.css"
+            styleClass="admin-background">
+
+    <VBox spacing="20" styleClass="admin-content-box">
+
+        <!-- Tabs Section -->
+        <TabPane fx:id="tabPaneReports" prefWidth="960.0" prefHeight="600.0">
+
+            <!-- Tab 1: Parking Time -->
+            <Tab text="Parking Time" closable="false">
+                <VBox spacing="15" styleClass="admin-content-box" VBox.vgrow="ALWAYS">
+
+                    <Label text="📊 Monthly Parking Time Report" styleClass="admin-subtitle" />
+
+                    <!-- Filters -->
+                    <HBox spacing="10">
+                        <ComboBox fx:id="comboYear"
+                                  prefWidth="120"
+                                  styleClass="combo-box"
+                                  onAction="#handleMonthOrYearSelection" />
+
+                        <ComboBox fx:id="comboMonth"
+                                  prefWidth="120"
+                                  styleClass="combo-box"
+                                  onAction="#handleMonthOrYearSelection" />
+                    </HBox>
+
+                    <Label fx:id="labelTotalHours"
+                           text="Total hours: ---"
+                           styleClass="admin-status" />
+
+                    <!-- Chart -->
+                    <PieChart fx:id="parkingTimePieChart"
+                              title="Total Monthly Parking Time"
+                              prefHeight="450"
+                              prefWidth="900"
+                              VBox.vgrow="ALWAYS" />
+                </VBox>
+            </Tab>
+
+            <!-- Tab 2: Subscribers per Day -->
+            <Tab text="Subscribers per Day" closable="false">
+                <VBox spacing="15" styleClass="admin-content-box" VBox.vgrow="ALWAYS">
+
+                    <Label text="📅 Subscribers Parking Count per Day"
+                           styleClass="admin-subtitle" />
+
+                    <BarChart fx:id="subscribersBarChart"
+                              title="Subscribers Parked per Day"
+                              prefHeight="480"
+                              prefWidth="920"
+                              categoryGap="10" barGap="4"
+                              VBox.vgrow="ALWAYS">
+                        <xAxis>
+                            <CategoryAxis label="Day of Month" />
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis label="Number of Subscribers" />
+                        </yAxis>
+                    </BarChart>
+                </VBox>
+            </Tab>
+        </TabPane>
+
+        <!-- Footer -->
+        <HBox alignment="CENTER_RIGHT">
+            <Button fx:id="btnBack"
+                    text="🔙 Back"
+                    onAction="#handleBack"
+                    styleClass="btn-secondary"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

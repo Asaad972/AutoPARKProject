@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="serverGui.ServerMonitorController" spacing="10" alignment="CENTER">
+    <Label text="Connected Clients" style="-fx-font-size: 20;" />
+    <TableView fx:id="clientTable" prefWidth="450">
+        <columns>
+            <TableColumn fx:id="ipCol" text="IP Address" prefWidth="150" />
+            <TableColumn fx:id="hostCol" text="Host Name" prefWidth="150" />
+            <TableColumn fx:id="statusCol" text="Status" prefWidth="150" />
+        </columns>
+    </TableView>
+</VBox>

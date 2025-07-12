@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="subscriberGui.EditSubscriberDetailsController"
+            stylesheets="@theme.css">
+
+    <VBox alignment="CENTER" spacing="25"
+          styleClass="background-pane"
+          AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0"
+          AnchorPane.topAnchor="0">
+
+        <!-- Back Button -->
+        <HBox alignment="TOP_LEFT">
+            <Button fx:id="btnBack" text="🔙 Back" onAction="#handleBack" styleClass="btn-secondary"/>
+        </HBox>
+
+        <!-- Title -->
+        <Label text="✏️ Edit Your Information" styleClass="section-title"/>
+
+        <!-- Input Grid -->
+        <GridPane alignment="CENTER" hgap="15" vgap="15">
+
+            <Label text="New Email:" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="form-label"/>
+            <TextField fx:id="txtNewEmail" promptText="Enter new email" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Confirm Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="form-label"/>
+            <TextField fx:id="txtConfirmEmail" promptText="Confirm new email" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="New Phone:" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="form-label"/>
+            <TextField fx:id="txtNewPhone" promptText="Enter new phone" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label fx:id="lblStatus" text="" styleClass="error-text"
+                   GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"/>
+
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+
+        <!-- Buttons -->
+        <HBox alignment="CENTER" spacing="20">
+            <Button fx:id="btnSave" text="💾 Save" onAction="#handleSave" styleClass="btn-action"/>
+            <Button fx:id="btnCancel" text="❌ Cancel" onAction="#handleCancel" styleClass="btn-secondary"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

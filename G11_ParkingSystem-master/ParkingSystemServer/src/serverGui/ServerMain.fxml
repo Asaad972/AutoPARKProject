@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="serverGui.ServerMainController"
+      spacing="20"
+      stylesheets="@server-style.css"
+      style="-fx-padding: 20; -fx-background-color: #f4f4f4;">
+
+
+    <!-- Title -->
+    <Label text="🚀 Parking System Server"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <!-- Server Configuration -->
+    <TitledPane text="Server Configuration" expanded="true">
+        <GridPane hgap="10" vgap="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <children>
+                <Label text="Server IP:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="serverIpField" GridPane.rowIndex="0" GridPane.columnIndex="1" editable="false"/>
+
+                <Label text="Server Port:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="serverPortField" GridPane.rowIndex="1" GridPane.columnIndex="1" text="5555"/>
+            </children>
+        </GridPane>
+    </TitledPane>
+
+    <!-- Database Configuration -->
+    <TitledPane text="Database Configuration" expanded="true">
+        <GridPane hgap="10" vgap="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <children>
+                <Label text="Database IP:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="dbIpField" GridPane.rowIndex="0" GridPane.columnIndex="1" text="localhost"/>
+
+                <Label text="Database Port:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="dbPortField" GridPane.rowIndex="1" GridPane.columnIndex="1" text="3306"/>
+
+                <Label text="DB Username:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="dbUserField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="DB Password:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <PasswordField fx:id="dbPassField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </children>
+        </GridPane>
+    </TitledPane>
+
+    <!-- Buttons -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Connect" fx:id="connectButton" onAction="#handleConnect"
+                style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        <Button text="Disconnect" fx:id="disconnectButton" onAction="#handleDisconnect"
+                style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        <Button text="Exit" onAction="#handleExit"
+                style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <!-- Status -->
+    <Label fx:id="statusLabel" text="🔧 Waiting for action..."
+           style="-fx-font-size: 14px; -fx-text-fill: #333333; -fx-padding: 10 0 0 0;"/>
+
+    <!-- Client Table -->
+    <TableView fx:id="clientTable" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="ipColumn" text="IP"/>
+            <TableColumn fx:id="hostColumn" text="Host"/>
+            <TableColumn fx:id="statusColumn" text="Status"/>
+        </columns>
+    </TableView>
+
+</VBox>

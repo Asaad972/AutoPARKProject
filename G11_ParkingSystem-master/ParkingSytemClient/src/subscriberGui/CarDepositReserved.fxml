@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="subscriberGui.DepositReservedParkingController"
+            stylesheets="@theme.css">
+
+    <VBox alignment="CENTER" spacing="20" prefWidth="400" prefHeight="400"
+          styleClass="background-pane"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <!-- Title -->
+        <Label text="🚗 Deposit Reserved Car" styleClass="section-title" />
+
+        <!-- Input Label -->
+        <Label text="Enter your confirmation code:" styleClass="form-label" />
+
+        <!-- Input Field -->
+        <TextField fx:id="txtConfirmationCode" promptText="e.g., 123456" prefWidth="250" styleClass="text-field"/>
+
+        <!-- Action Buttons -->
+        <HBox spacing="20" alignment="CENTER">
+            <Button fx:id="btnDeposit" text="✅ Deposit"
+                    onAction="#handleDepositReserved" styleClass="btn-action"/>
+            <Button fx:id="btnBack" text="🔙 Back"
+                    onAction="#handleBack" styleClass="btn-secondary"/>
+        </HBox>
+
+        <!-- Feedback -->
+        <Label fx:id="lblMessage" text="" styleClass="error-text" />
+
+        <!-- Cancel Section -->
+        <Label text="❌ Cancel a Reservation" styleClass="section-title" />
+        <Label text="Enter confirmation code to cancel:" styleClass="form-label" />
+
+        <TextField fx:id="txtCancelCode" promptText="e.g., 123456" prefWidth="250" styleClass="text-field"/>
+
+        <Button fx:id="btnCancelReservation"
+                text="Cancel Reservation"
+                onAction="#handleCancelReservation"
+                styleClass="btn-danger"/>
+
+    </VBox>
+</AnchorPane>

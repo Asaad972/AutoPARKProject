@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="client.ConnectViewController">
+
+    <VBox alignment="CENTER" spacing="15"
+          AnchorPane.topAnchor="40.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0"
+          AnchorPane.bottomAnchor="30.0" style="-fx-background-color: #f0f0f0; -fx-padding: 20;">
+
+        <Label text="🅿️ BPARK - Connect to Server"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+        <TextField fx:id="txtServerIp" promptText="Server IP (e.g. localhost)" />
+        <TextField fx:id="txtServerPort" promptText="Server Port (e.g. 5555)" />
+
+        <Button fx:id="connectButton" text="Connect"
+                onAction="#handleConnect" style="-fx-background-color: #3f88c5; -fx-text-fill: white;" />
+
+        <Label fx:id="statusLabel" text="Enter connection details to begin."
+               style="-fx-text-fill: #555;" />
+    </VBox>
+</AnchorPane>

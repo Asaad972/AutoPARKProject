@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600" prefWidth="850" styleClass="admin-background" stylesheets="@admincss.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminGui.AdminSubscribersController">
+
+    <VBox spacing="25" styleClass="admin-content-box">
+
+        <!-- Title -->
+        <Label styleClass="admin-title" text="👤 Subscriber Management" />
+
+        <!-- Search Row -->
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <TextField fx:id="txtSearchId" prefHeight="31.0" prefWidth="166.0" promptText="Search by Sub ID" styleClass="search-field" />
+            <Button fx:id="btnSearch" styleClass="btn-action" text="🔍 Search" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnRefresh" styleClass="btn-refresh" text="🔄 View All" />
+        </HBox>
+
+        <!-- Table -->
+        <TableView fx:id="subscriberTable" prefHeight="250" styleClass="admin-table">
+            <columns>
+                <TableColumn fx:id="colSubCode" prefWidth="140" text="Subscriber Code" />
+                <TableColumn fx:id="colId" prefWidth="60" text="ID" />
+                <TableColumn fx:id="colFullName" prefWidth="200" text="Fullname" />
+                <TableColumn fx:id="colUsername" prefWidth="160" text="Username" />
+                <TableColumn fx:id="colPhone" prefWidth="140" text="Phone number" />
+                <TableColumn fx:id="colEmail" prefWidth="220" text="Email" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="btnParkingHistory" onAction="#handleParkingHistory" styleClass="btn-secondary" text="📜 View Parking History" />
+
+        <!-- Add New Subscriber Section -->
+        <VBox spacing="10">
+            <Label styleClass="form-label" text="➕ Add New Subscriber (role: subscriber)" />
+            <HBox spacing="10">
+                <TextField fx:id="txtID" promptText="ID" styleClass="form-input" />
+                <PasswordField fx:id="txtPassword" promptText="Password" styleClass="form-input" />
+                <TextField fx:id="txtFirstName" promptText="First Name" styleClass="form-input" />
+                <TextField fx:id="txtLastName" promptText="Last Name" styleClass="form-input" />
+                <TextField fx:id="txtEmail" promptText="Email" styleClass="form-input" />
+                <TextField fx:id="txtPhone" promptText="Phone" styleClass="form-input" />
+            </HBox>
+        </VBox>
+
+        <Button fx:id="btnAddSubscriber" styleClass="btn-action" text="➕ Add Subscriber" />
+
+        <Label fx:id="lblStatus" styleClass="admin-status" text="Status messages appear here" />
+
+        <!-- Back Button -->
+        <HBox alignment="CENTER_RIGHT">
+            <Button fx:id="btnBack" onAction="#handleBack" styleClass="btn-secondary" text="🔙 Back" />
+        </HBox>
+
+    </VBox>
+</AnchorPane>

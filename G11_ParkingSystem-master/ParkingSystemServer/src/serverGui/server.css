@@ -1,0 +1,28 @@
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.title-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #334e68;
+}
+
+.button-connect {
+    -fx-background-color: #3f88c5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+}
+
+.button-connect:hover {
+    -fx-background-color: #2779bd;
+}
+
+.status-label {
+    -fx-text-fill: #555;
+    -fx-padding: 10 0 0 0;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="subscriberGui.ExtendParkingController"
+            stylesheets="@theme.css">
+
+    <VBox alignment="CENTER" spacing="20"
+          styleClass="background-pane"
+          AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0">
+
+        <!-- Title -->
+        <Label text="⏱ Extend Parking Time" styleClass="section-title" />
+
+        <!-- Subtitle -->
+        <Label text="Default duration is 4 hours. You may extend up to 4 more." styleClass="form-note" />
+
+        <!-- Spacer row (if needed for future content) -->
+        <HBox alignment="CENTER" spacing="10">
+            <Label />
+        </HBox>
+
+        <!-- Confirm Button -->
+        <Button fx:id="btnExtend"
+                text="✔ Confirm Extension"
+                onAction="#handleFinishExtendTime"
+                styleClass="btn-action" />
+
+        <!-- Status Message -->
+        <Label fx:id="lblStatus" text="" styleClass="available-label" />
+
+        <!-- Back Button -->
+        <Button fx:id="btnBack"
+                text="🔙 Back"
+                onAction="#goBack"
+                styleClass="btn-secondary" />
+    </VBox>
+</AnchorPane>

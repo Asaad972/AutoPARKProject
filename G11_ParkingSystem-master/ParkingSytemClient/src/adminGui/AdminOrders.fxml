@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="adminGui.AdminOrdersController"
+      spacing="25"
+      stylesheets="@admincss.css"
+      styleClass="admin-background">
+
+    <!-- Title -->
+    <Label text="🚗 Active Parking Details" styleClass="admin-subtitle"/>
+
+    <!-- Search Section -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="🔍 Search:" styleClass="form-label"/>
+        <TextField fx:id="txtSearchSubId" promptText="Subscriber ID" styleClass="search-field"/>
+        <TextField fx:id="txtSearchSpot" promptText="Parking Spot" styleClass="search-field"/>
+        <Button fx:id="btnSearch" text="Search" styleClass="btn-action"/>
+        <Button fx:id="btnClear" text="Clear" styleClass="btn-secondary"/>
+    </HBox>
+
+    <!-- Active Parking Table -->
+    <TableView fx:id="tableActiveParking" prefHeight="300" prefWidth="900" styleClass="admin-table">
+        <columns>
+            <TableColumn fx:id="colActiveSubId" text="Subscriber ID" prefWidth="120"/>
+            <TableColumn fx:id="colActiveSpotId" text="Spot ID" prefWidth="120"/>
+            <TableColumn fx:id="colActiveEntryTime" text="Entry Time" prefWidth="150"/>
+            <TableColumn fx:id="colActiveExpectedExitTime" text="Expected Exit Time" prefWidth="150"/>
+            <TableColumn fx:id="colActiveCode" text="Parking Code" prefWidth="140"/>
+        </columns>
+    </TableView>
+
+    <!-- Status -->
+    <Label fx:id="lblStatus" text="No results found" styleClass="admin-status"/>
+
+    <!-- Footer Buttons -->
+    <HBox spacing="15" alignment="CENTER_RIGHT">
+        <Button fx:id="btnRefresh" text="🔄 Refresh" styleClass="btn-refresh"/>
+        <Button fx:id="btnBack" text="🔙 Back to Menu" onAction="#handleBack" styleClass="btn-danger"/>
+    </HBox>
+</VBox>

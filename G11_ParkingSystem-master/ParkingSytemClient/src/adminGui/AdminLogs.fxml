@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="25"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="adminGui.AdminLogsController"
+      stylesheets="@admincss.css"
+      styleClass="admin-background">
+
+    <!-- Title -->
+    <Label text="🧾 System Logs" styleClass="admin-title"/>
+
+    <!-- Logs Table -->
+    <TableView fx:id="tableLogs" prefHeight="350" prefWidth="900" styleClass="admin-table">
+        <columns>
+            <TableColumn fx:id="colLogId" text="Log ID" prefWidth="80" />
+            <TableColumn fx:id="colAction" text="Action" prefWidth="150" />
+            <TableColumn fx:id="colTarget" text="Target" prefWidth="150" />
+            <TableColumn fx:id="colByUser" text="By User" prefWidth="120" />
+            <TableColumn fx:id="colTime" text="Timestamp" prefWidth="180" />
+            <TableColumn fx:id="colNote" text="Note" prefWidth="200" />
+        </columns>
+    </TableView>
+
+    <!-- Status Label -->
+    <Label fx:id="lblStatus" text="Logs not loaded" styleClass="admin-status" />
+
+    <!-- Action Buttons -->
+    <HBox spacing="15" alignment="CENTER_RIGHT">
+        <Button fx:id="btnRefreshLogs" text="🔄 Refresh" styleClass="btn-refresh"/>
+        <Button fx:id="btnBack" text="🔙 Back to Menu" onAction="#handleBack" styleClass="btn-danger"/>
+    </HBox>
+</VBox>

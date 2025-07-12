@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="subscriberGui.ForgotCodeController"
+            stylesheets="@theme.css">
+
+    <VBox spacing="25" alignment="CENTER"
+          styleClass="background-pane"
+          AnchorPane.topAnchor="0.0"
+          AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0">
+
+        <!-- Title -->
+        <Label text="❓ Forgot Your Parking Code" styleClass="section-title" />
+
+        <!-- Subtitle -->
+        <Label text="Choose how to receive your code:" styleClass="form-label" />
+
+        <!-- Radio buttons -->
+        <VBox spacing="15">
+            <RadioButton fx:id="radioEmail" toggleGroup="$toggleMethod" text="" />
+            <RadioButton fx:id="radioPhone" toggleGroup="$toggleMethod" text="" />
+        </VBox>
+
+        <!-- Send Button -->
+        <Button text="📨 Send Code" fx:id="btnSendCode" styleClass="btn-action" />
+
+        <!-- Result Message -->
+        <Label fx:id="lblResult" text="" styleClass="available-label" />
+
+        <!-- Back Button -->
+        <Button text="🔙 Back" fx:id="btnBack" styleClass="btn-secondary" />
+
+    </VBox>
+</AnchorPane>
